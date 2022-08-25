@@ -28,7 +28,7 @@ class Main extends PluginBase{
         $version = curl_exec($githubv);
         curl_close($githubv);
         if($config->get("Version") !==  $version) {
-            $this->getLogger()->info("ScrimAS is outdated. https://poggit.pmmp.io/p/ScrimAS/");
+            $this->getLogger()->info("§l§6»§r §cScrimAS is outdated. https://poggit.pmmp.io/p/ScrimAS/");
         }
     }
     
@@ -50,7 +50,7 @@ class Main extends PluginBase{
                 $user = new User;
                 $user->checkAlert($sender);
             } else {
-                $sender->sendMessage("You don't have permission to run this command!");
+                $sender->sendMessage("§l§6»§r §cYou don't have permission to run this command!");
             }
             return true;
     }
