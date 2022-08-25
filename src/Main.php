@@ -28,7 +28,7 @@ class Main extends PluginBase{
         $version = curl_exec($githubv);
         curl_close($githubv);
         if($config->get("Version") !==  $version) {
-            $this->getLogger()->info("§l§6»§r §cScrimAS is outdated. https://poggit.pmmp.io/p/ScrimAS/");
+            $this->getLogger()->info("§l§6»§r §cAnticheat is outdated. https://poggit.pmmp.io/p/ScrimAS/");
         }
     }
     
