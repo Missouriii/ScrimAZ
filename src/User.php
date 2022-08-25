@@ -15,10 +15,10 @@ class User{
         $new = Main::getInstance()->getConfig();
         if($config->get($player->getName()) == true) {
             $config->set($player->getName(), false);
-            $player->SendMessage($new->get("AntiCheat.prefix")." Your alerts are now ENABLED!");
+            $player->SendMessage($new->get("AntiCheat.prefix")." §l§6» §r§aAnticheat alerts are now §2ENABLED!");
         } elseif($config->get($player->getName()) == false) {
             $config->set($player->getName(), true);
-            $player->SendMessage($new->get("AntiCheat.prefix")." Your alerts are now DISABLED!");
+            $player->SendMessage($new->get("AntiCheat.prefix")." §l§6» §r§aYour alerts are now §4DISABLED!");
         }
         $config->save();
         
@@ -28,7 +28,7 @@ class User{
          $config = new Config('plugin_data/ScrimAS/'."user.yml", Config::YAML);
          $new = Main::getInstance()->getConfig();
          if($config->get($staff->getName()) == false) {
-             $staff->SendMessage($new->get("AntiCheat.prefix")." $player has been using $cheat.");
+             $staff->SendMessage($new->get("AntiCheat.prefix")." §l§6»§r §e$player§c has been using §b$cheat");
          }
     }
 
